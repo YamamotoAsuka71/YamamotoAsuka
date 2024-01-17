@@ -1,6 +1,6 @@
 20231011/Academy.txt
 *.exe
-*.lik
+*.ilk
 *.obj
 *.pdb
 .vscode/
