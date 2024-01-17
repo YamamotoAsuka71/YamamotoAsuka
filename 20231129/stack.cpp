@@ -1,43 +1,86 @@
 #include "stdlib.h"
 #include <iostream>
 #include <string.h>
+#include <vector>
 
 using namespace std;
 
-#define LIST_SIZE 5
+vector<char> stack;
 
-void push(string &list_, int *currentIndex_, char data)
+void push(char data)
 {
-    list_[*currentIndex_]=data;
-    *currentIndex_ = *currentIndex_ + 1;
-    cout << "push " << data << endl;
-    for(int i = 0 ; i < LIST_SIZE ; i++)
+
+    stack.push_back(data);
+    cout<<data<<" push"<<endl;
+    for (size_t i = 0; i < stack.size(); ++i) 
     {
-        cout << list_[i] << endl;
+        cout << stack[i] << " ";
     }
+    cout<<endl;
 }
 
-void pop(string &list_, int *currentIndex_)
+void pop()
 {
-    *currentIndex_ = *currentIndex_ - 1;
-    cout << "pop " << list_[*currentIndex_]<<endl;
-    list_[*currentIndex_]=' ';
-    for(int i = 0 ; i < LIST_SIZE ; i++)
+    cout<<stack.back()<<" pop"<<endl;
+    stack.pop_back();
+    for (size_t i = 0; i < stack.size(); ++i) 
     {
-        cout << list_[i] << endl;
+        cout << stack[i] << " ";
     }
+    cout<<endl;
 }
 
 int main(void)
 {
-    int currentIndex = 0;
-    string list[LIST_SIZE] = {};
 
-    push(*list, &currentIndex,'A');
-    cout << currentIndex << endl;
+    push('A');
+    push('B');
+    push('C');
+    push('D');
+    push('E');
+    pop();
+    pop();
+    pop();
+    pop();
+    push('F');
+    push('G');
+    push('H');
+    push('I');
+    pop();
+    pop();
+    pop();
+    push('J');
+    push('K');
+    push('L');
+    pop();
+    pop();
+    push('M');
+    push('N');
+    pop();
+    push('O');
 
-    pop(*list,&currentIndex);
-    cout << currentIndex << endl;
-
+    pop();
+    pop();
+    pop();
+    pop();
+    pop();
+    push('P');
+    push('Q');
+    push('R');
+    push('S');
+    push('T');
+    pop();
+    pop();
+    pop();
+    pop();
+    push('U');
+    push('V');
+    push('W');
+    push('X');
+    pop();
+    pop();
+    pop();
+    push('Y');
+    push('Z');
     return 0;
 }
