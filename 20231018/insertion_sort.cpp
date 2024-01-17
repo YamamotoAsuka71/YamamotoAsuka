@@ -17,7 +17,7 @@ void insertionSort(int arr[], int n) {
 }
 
 int main() {
-    int data[] = {4, 1, 7, 0, 8, 2, 5, 9, 3, 6};
+    int data[] = {1,9,3,2,5,7,4,6,8,0};
     int n = sizeof(data) / sizeof(data[0]);
     for (int i = 0; i < n; ++i) {
         cout << data[i] << " ";
