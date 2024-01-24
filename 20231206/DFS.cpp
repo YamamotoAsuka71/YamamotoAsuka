@@ -285,6 +285,7 @@ int main()
     int x = 2, y = 3;
     while(isFinished == false)
     {
+        cout<<"Current coordinates are "<<x<<","<<y<<endl;
         //cout<<x<<","<<y<<endl;
         Loop(x,y,&x,&y);
     }
