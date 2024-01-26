@@ -105,7 +105,7 @@ void Loop(int routeNum, int* shortestNum_)
     Index index,down,right,left,up;
     bool isStarted = false;
 
-    //  
+    cout<<"Current coordinates are "<<routes[routeNum].route.back().x<<","<<routes[routeNum].route.back().y<<endl;
     
 
     if(data[routes[routeNum].route.back().y][routes[routeNum].route.back().x] == GOAL)
